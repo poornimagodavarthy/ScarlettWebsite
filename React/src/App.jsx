@@ -242,9 +242,9 @@ export default function ScarlettLabs() {
             </p>
           </div>
           <nav style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', gap: '1.5rem', flex: 2 }}>
-            <a href="method" className="nav-link">Method</a>
-            <a href="results" className="nav-link">Results</a>
-            <a href="about" className="nav-link">About</a>
+            <a href="#method" className="nav-link">Method</a>
+            <a href="#results" className="nav-link">Results</a>
+            <a href="#about" className="nav-link">About</a>
             <button className="cta-button" onClick={() => setShowModal(true)}>Let's Talk</button>
           </nav>
         </div>
