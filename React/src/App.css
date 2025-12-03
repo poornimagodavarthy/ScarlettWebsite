@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+}
+
+.App {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* ===== HEADER ===== */
+.divider-line {
+  width: 100%;
+  height: 1px;
+  background-color: #dcdcdc;
+  margin-top: 7rem;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.header-container {
+  padding: 2rem 4rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.logo-section {
+  flex: 1;
+}
+
+.logo-img {
+  position: relative;
+  z-index: 10;
+  margin-top: -1.2rem;
+}
+
+.brand-name {
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 0;
+  position: relative;
+  z-index: 10;
+}
+
+.tagline {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+/* ===== NAVIGATION ===== */
+.nav-menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 2;
+}
+
+.nav-link {
+  font-size: 1.3rem;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #4a1a1a;
+}
+
+/* ===== BUTTONS ===== */
+.cta-button,
+.contact-button {
+  background: #4a1a1a;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.cta-button:hover,
+.contact-button:hover {
+  background: #6a2a2a;
+}
+
+.cta-button {
+  padding: 0.8rem 3rem;
+  font-size: 1.3rem;
+  white-space: nowrap;
+}
+
+.contact-button {
+  padding: 1.2rem 4rem;
+  font-size: 1.4rem;
+  margin-top: 2rem;
+}
+
+/* ===== HERO SECTION ===== */
+.hero-section {
+  padding: 0 2rem;
+  margin-top: 0;
+}
+
+.hero-title {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #000;
+  margin-top: 5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+/* ===== METHOD SECTION ===== */
+.method-section {
+  padding: 2.5rem 3rem;
+  background: #f8f8f8;
+}
+
+.method-card {
+  background: white;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  border-left: 4px solid #4a1a1a;
+  transition: transform 0.3s;
+}
+
+.method-card:hover {
+  transform: translateX(10px);
+}
+
+.method-number {
+  font-size: 3rem;
+  color: #4a1a1a;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.method-title {
+  font-size: 1.8rem;
+  color: #000;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.method-description {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ===== RESULTS SECTION ===== */
+.results-section {
+  padding: 5rem 6rem;
+  background: white;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.stat-box {
+  text-align: center;
+  padding: 2rem;
+}
+
+.stat-number {
+  font-size: 3.5rem;
+  color: #4a1a1a;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1.2rem;
+  color: #555;
+  font-weight: 300;
+}
+
+.case-study {
+  background: #f8f8f8;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.case-study-title {
+  font-size: 1.6rem;
+  color: #4a1a1a;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.case-study-text {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* ===== ABOUT SECTION ===== */
+.about-section {
+  padding: 4rem 6rem;
+  background: #4a1a1a;
+  color: white;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.about-container {
+  max-width: 80%;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 3.5fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.headshot {
+  width: 250px;
+  height: 250px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.about-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact-section {
+  padding: 5rem 6rem;
+  background: white;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  color: #000;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.contact-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  padding: 2rem 6rem;
+  background: white;
+  text-align: center;
+  color: #555;
+  font-size: 0.95rem;
+  border-top: 1px solid #ddd;
+}
+
+.footer p {
+  margin: 0.5rem 0;
+}
+
+/* ===== SHARED STYLES ===== */
+.section-title {
+  font-size: 2.5rem;
+  color: #4a1a1a;
+  margin-bottom: 3rem;
+  font-weight: 400;
+}
+
+/* ===== FLOATING CONTACT BUTTON ===== */
+.form-trigger {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #4a1a1a;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 9999;
+  font-weight: 600;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.form-trigger:hover {
+  background: #4a1a1a;
+}
+
+/* ===== MODAL ===== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 99998;
+}
+
+.modal-content {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+  z-index: 99999;
+  padding: 2rem;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.modal-title {
+  margin-top: 0;
+  color: #333;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.submit-button {
+  background: #4a1a1a;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.submit-button:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
