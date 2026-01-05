@@ -32,7 +32,7 @@ const STATISTICS = [
 
 const CASE_STUDIES = [
   {
-    title: "Source-Cited Knowledge System for a Global Brand Agency",
+    title: "Knowledge System for a Global Brand Agency",
     description:
       "Partnered with a creative strategy team to streamline how they analyze customer feedback and campaign data. Built an AI-driven assistant that organizes survey responses, highlights patterns, and surfaces actionable insights for brand pitches and client presentations.",
     impact: "Cut insight generation time from days to under an hour, improving pitch turnaround and internal clarity."
