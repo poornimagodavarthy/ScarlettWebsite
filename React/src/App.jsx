@@ -259,7 +259,7 @@ export default function ScarlettLabs() {
             lineHeight: 1.2, 
             textAlign: 'center' 
           }}>
-            Where Strategy Meets Intelligence.
+            Intelligence for accessing your organization’s knowledge.
           </h1>
           <p style={{ 
             fontSize: '1rem', 
