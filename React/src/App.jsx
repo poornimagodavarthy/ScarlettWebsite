@@ -410,13 +410,13 @@ export default function ScarlettLabs() {
             <div>
               <input
                 type="text"
-                placeholder="Your Name"
+                placeholder="Name"
                 value={formData.name}
                 onChange={(e) => setFormData({...formData, name: e.target.value})}
               />
               <input
                 type="email"
-                placeholder="Your Email"
+                placeholder="Email"
                 value={formData.email}
                 onChange={(e) => setFormData({...formData, email: e.target.value})}
               />
