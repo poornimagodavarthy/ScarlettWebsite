@@ -421,7 +421,7 @@ export default function ScarlettLabs() {
                 onChange={(e) => setFormData({...formData, email: e.target.value})}
               />
               <textarea
-                placeholder="Tell us about your project"
+                placeholder="What would you like to explore or improve?"
                 rows="5"
                 value={formData.message}
                 onChange={(e) => setFormData({...formData, message: e.target.value})}
