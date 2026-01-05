@@ -3,35 +3,36 @@ import React, { useState } from 'react';
 const METHOD_STEPS = [
   {
     number: "01",
-    title: "Discovery & Strategy",
-    description: "We start with a complimentary consultation to understand your goals, your team's workflows, and where AI can create meaningful impact. No jargon, no pressure — just a clear conversation about what's possible."
+    title: "Discovery",
+    description: "We begin with a focused conversation to understand how your team currently finds information, where knowledge lives, and where friction slows decisions."
   },
   {
     number: "02",
-    title: "Opportunity Mapping",
-    description: "During the first week of the engagement, we analyze your tools, content, and processes to identify where AI can remove friction, save time, or unlock new capabilities. You'll receive a concise, founder-led assessment of your highest-value opportunities."
+    title: "Knowledge Mapping",
+    description: "We review your internal documents, systems, and terminology to identify where AI can deliver fast, reliable answers with clear source attribution."
   },
   {
     number: "03",
-    title: "Pilot Design & Build (4–6 Weeks)",
-    description: "We design and build a tailored pilot solution — usually an internal AI assistant, an automated workflow, or a retrieval-augmented tool with a simple, intuitive interface. This is a collaborative process with weekly check-ins to ensure the solution fits naturally into your operations."
+    title: "Pilot Build (4–6 Weeks)",
+    description: "We design and deploy a private AI pilot tailored to your workflows — enabling teams to ask questions in natural language and receive precise, document-linked answers."
   },
   {
     number: "04",
-    title: "Optimize & Scale",
-    description: "Your team gets hands-on experience with the pilot. We collect feedback, refine lightly, and help you understand what to keep, change, or scale next."
+    title: "Refine & Extend",
+    description: "Your team tests the system in real workflows. We refine lightly and outline what makes sense to scale, adapt, or expand next."
   }
 ];
 
 const STATISTICS = [
-  { number: "95%", label: "Faster Information Retrieval" },
-  { number: "60%", label: "Reduction in Manual Work" },
-  { number: "100%", label: "Client Satisfaction" }
+  { number: "95%", label: "Less Time Spent Searching for Information" },
+  { number: "60%", label: "Fewer Repetitive Internal Questions" },
+  { number: "100%", label: "Source-Verified Answers" }
 ];
+
 
 const CASE_STUDIES = [
   {
-    title: "Customer Insights Automation for a Global Brand Agency",
+    title: "Source-Cited Knowledge System for a Global Brand Agency",
     description:
       "Partnered with a creative strategy team to streamline how they analyze customer feedback and campaign data. Built an AI-driven assistant that organizes survey responses, highlights patterns, and surfaces actionable insights for brand pitches and client presentations.",
     impact: "Cut insight generation time from days to under an hour, improving pitch turnaround and internal clarity."
@@ -269,7 +270,7 @@ export default function ScarlettLabs() {
             fontWeight: 300, 
             textAlign: 'center' 
           }}>
-            Boutique AI Consulting that turns complexity into clarity.
+            Bring clarity to internal knowledge with answers grounded in your own documents.
           </p>
         </div>
       </div>
