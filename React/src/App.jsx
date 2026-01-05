@@ -29,7 +29,6 @@ const STATISTICS = [
   { number: "100%", label: "Source-Verified Answers" }
 ];
 
-
 const CASE_STUDIES = [
   {
     title: "Knowledge System for a Global Brand Agency",
