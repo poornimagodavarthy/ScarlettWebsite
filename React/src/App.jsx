@@ -28,7 +28,6 @@ const STATISTICS = [
   { number: "60%", label: "Fewer Repetitive Internal Questions" },
   { number: "100%", label: "Source-Verified Answers" }
 ];
-
 const CASE_STUDIES = [
   {
     title: "Knowledge System for a Global Brand Agency",
