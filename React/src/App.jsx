@@ -268,7 +268,7 @@ export default function ScarlettLabs() {
             fontWeight: 300, 
             textAlign: 'center' 
           }}>
-            Bring clarity to internal knowledge — with precise, source-linked answers from your own documents.
+            Bring clarity to internal knowledge with precise, source-linked answers from your own documents.
           </p>
         </div>
       </div>
