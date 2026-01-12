@@ -114,17 +114,17 @@ export default function ScarlettLabs() {
 
         {/* Hero */}
         <div style={{ padding: '0 clamp(1rem, 5vw, 2rem)', marginTop: 0 }}>
-          <h1 style={{ 
-            fontSize: 'clamp(1.5rem, 5vw, 2rem)',
-            fontWeight: 300, 
-            color: '#000', 
-            marginTop: '5rem', 
-            marginBottom: '1.5rem', 
-            lineHeight: 1.2, 
-            textAlign: 'center' 
-          }}>
-            Intelligence for accessing your organization’s knowledge. 
-          </h1>
+        <h1 style={{ 
+          fontSize: 'clamp(1.5rem, 5vw, 2rem)',
+          fontWeight: 300, 
+          color: '#000', 
+          marginTop: '7rem', 
+          marginBottom: '1.5rem', 
+          lineHeight: 1.2, 
+          textAlign: 'center' 
+        }}>
+          Intelligence for accessing your organization's knowledge. 
+        </h1>
           <p style={{ 
             fontSize: '1rem', 
             color: '#333', 
