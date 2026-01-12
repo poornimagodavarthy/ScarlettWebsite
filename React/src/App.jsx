@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-const [showMenu, setShowMenu] = useState(false);
 
 const METHOD_STEPS = [
   {
@@ -95,37 +94,27 @@ export default function ScarlettLabs() {
             </p>
           </div>
           <nav className="nav-responsive" style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', gap: '1.5rem', flex: 2 }}>
-            <a href="#method" className="nav-link desktop-only">Method</a>
-            <a href="#results" className="nav-link desktop-only">Results</a>
-            <a href="#about" className="nav-link desktop-only">About</a>
+            <a href="#method" className="nav-link">Method</a>
+            <a href="#results" className="nav-link">Results</a>
+            <a href="#about" className="nav-link">About</a>
             <button className="cta-button" onClick={() => setShowModal(true)}>Let's Talk</button>
-            <button className="hamburger-btn" onClick={() => setShowMenu(!showMenu)}>
-              ☰
-            </button>
           </nav>
-          {showMenu && (
-            <div className="mobile-menu">
-              <a href="#method" onClick={() => setShowMenu(false)}>Method</a>
-              <a href="#results" onClick={() => setShowMenu(false)}>Results</a>
-              <a href="#about" onClick={() => setShowMenu(false)}>About</a>
-            </div>
-          )}
         </div>
 
         {/* Hero */}
         <div style={{ padding: '0 clamp(1rem, 5vw, 2rem)', marginTop: 0 }}>
-        <h1 className="hero-title" style={{ 
-          fontSize: 'clamp(1.875rem, 5vw, 2rem)',
-          fontWeight: 300, 
-          color: '#000', 
-          marginTop: '5rem', 
-          marginBottom: '1.5rem', 
-          lineHeight: 1.2, 
-          textAlign: 'center' 
-        }}>
+          <h1 style={{ 
+            fontSize: 'clamp(1.5rem, 5vw, 2rem)',
+            fontWeight: 300, 
+            color: '#000', 
+            marginTop: '5rem', 
+            marginBottom: '1.5rem', 
+            lineHeight: 1.2, 
+            textAlign: 'center' 
+          }}>
             Intelligence for accessing your organization’s knowledge. 
           </h1>
-          <p className="hero-subtitle" style={{ 
+          <p style={{ 
             fontSize: '1rem', 
             color: '#333', 
             marginBottom: '10rem', 
@@ -175,13 +164,13 @@ export default function ScarlettLabs() {
           Results That Matter
         </h2>
         
-        <div className="stats-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem', marginBottom: '4rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem', marginBottom: '4rem' }}>
           {STATISTICS.map((stat, idx) => (
-            <div key={idx} className="stat-box" style={{ textAlign: 'center', padding: '2rem' }}>
-              <div className="stat-number" style={{ fontSize: '3.5rem', color: '#4a1a1a', fontWeight: 300, marginBottom: '0.5rem' }}>
+            <div key={idx} style={{ textAlign: 'center', padding: '2rem' }}>
+              <div style={{ fontSize: '3.5rem', color: '#4a1a1a', fontWeight: 300, marginBottom: '0.5rem' }}>
                 {stat.number}
               </div>
-              <div className="stat-label" style={{ fontSize: '1.2rem', color: '#555', fontWeight: 300 }}>
+              <div style={{ fontSize: '1.2rem', color: '#555', fontWeight: 300 }}>
                 {stat.label}
               </div>
             </div>
