@@ -280,7 +280,6 @@ export default function ScarlettLabs() {
           color: '#444',
           textAlign: 'center'
         }}>
-          As teams scale, internal documents fragment quietly. SOPs, spreadsheets, and process notes still exist — but finding the right answer often depends on who you ask, not where it’s written.
         </p>
 
         </div>
