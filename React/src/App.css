@@ -523,4 +523,74 @@ textarea {
   .case-study-text {
     font-weight: 400;
   }
+
+  .hamburger {
+    display: flex;
+    position: relative;
+    z-index: 1002;
+  }
+  
+  .nav-responsive {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 70%;
+    max-width: 300px;
+    background: white;
+    flex-direction: column;
+    align-items: flex-start !important;
+    padding: 4rem 2rem 2rem;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    gap: 1.5rem !important;
+  }
+  
+  .nav-responsive.mobile-open {
+    right: 0;
+  }
+  
+  .nav-link {
+    font-size: 1.3rem;
+    width: 100%;
+  }
+  
+  .cta-button {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .mobile-menu-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+  
+}
+
+/* Hamburger menu - hidden on desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #4a1a1a;
+  transition: all 0.3s;
+}
+.mobile-menu-overlay {
+  display: none;
 }

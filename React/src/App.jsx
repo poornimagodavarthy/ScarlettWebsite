@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 const METHOD_STEPS = [
   {
     number: "01",
@@ -53,6 +54,7 @@ const CASE_STUDIES = [
 export default function ScarlettLabs() {
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleSubmit = async () => {
     const response = await fetch("https://formspree.io/f/xblnywed", {
@@ -77,29 +79,38 @@ export default function ScarlettLabs() {
       {/* Header */}
       <div className="divider-line"></div>
       <div style={{ padding: 'clamp(1.5rem, 3vw, 2rem) clamp(1rem, 3vw, 1.5rem)' }}>
-        <div className="header-flex" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-          <div style={{ flex: 1 }}>
-            <img 
-              src="ScarlettLabsLogo.png" 
-              alt="Scarlett Labs Logo" 
-              width="130"
-              className="logo-img"
-            />
-            
-            <h1 style={{ fontSize: '2rem', fontWeight: 300, margin: 0, position: 'relative', zIndex: 10 }}>
-              Scarlett Labs
-            </h1>
-            <p style={{ fontSize: '1rem', fontWeight: 300, margin: 0 }}>
-              Boutique AI Consulting
-            </p>
-          </div>
-          <nav className="nav-responsive" style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', gap: '1.5rem', flex: 2 }}>
-            <a href="#method" className="nav-link">Method</a>
-            <a href="#results" className="nav-link">Results</a>
-            <a href="#about" className="nav-link">About</a>
-            <button className="cta-button" onClick={() => setShowModal(true)}>Let's Talk</button>
-          </nav>
+      <div className="header-flex" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+        <div style={{ flex: 1 }}>
+          <img 
+            src="ScarlettLabsLogo.png" 
+            alt="Scarlett Labs Logo" 
+            width="130"
+            className="logo-img"
+          />
+          
+          <h1 style={{ fontSize: '2rem', fontWeight: 300, margin: 0, position: 'relative', zIndex: 10 }}>
+            Scarlett Labs
+          </h1>
+          <p style={{ fontSize: '1rem', fontWeight: 300, margin: 0 }}>
+            Boutique AI Consulting
+          </p>
         </div>
+        
+        <button className="hamburger" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <nav className={`nav-responsive ${mobileMenuOpen ? 'mobile-open' : ''}`} style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', gap: '1.5rem', flex: 2 }}>
+          <a href="#method" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Method</a>
+          <a href="#results" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Results</a>
+          <a href="#about" className="nav-link" onClick={() => setMobileMenuOpen(false)}>About</a>
+          <button className="cta-button" onClick={() => { setShowModal(true); setMobileMenuOpen(false); }}>Let's Talk</button>
+        </nav>
+        
+        {mobileMenuOpen && <div className="mobile-menu-overlay" onClick={() => setMobileMenuOpen(false)}></div>}
+      </div>
 
         {/* Hero */}
         <div style={{ padding: '0 clamp(1rem, 5vw, 2rem)', marginTop: 0 }}>
