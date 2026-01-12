@@ -130,7 +130,7 @@ export default function ScarlettLabs() {
           <p style={{ 
             fontSize: '1rem', 
             color: '#333', 
-            marginBottom: '15rem', 
+            marginBottom: '2rem', 
             fontWeight: 300, 
             textAlign: 'center' 
           }}>
@@ -141,7 +141,7 @@ export default function ScarlettLabs() {
             onClick={() => setShowModal(true)}
             style={{
               display: 'none',
-              margin: '0 auto 15rem',
+              margin: '0 auto 12rem',
               background: '#4a1a1a',
               color: 'white',
               border: 'none',
