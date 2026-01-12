@@ -88,10 +88,10 @@ export default function ScarlettLabs() {
             className="logo-img"
           />
           
-          <h1 style={{ fontSize: '2rem', fontWeight: 300, margin: 0, position: 'relative', zIndex: 10 }}>
+          <h1 style={{ fontSize: '2rem', fontWeight: 300, margin: 0, position: 'relative', zIndex: 10 }} className="brand-name">
             Scarlett Labs
           </h1>
-          <p style={{ fontSize: '1rem', fontWeight: 300, margin: 0 }}>
+          <p style={{ fontSize: '1rem', fontWeight: 300, margin: 0 }} className="tagline">
             Boutique AI Consulting
           </p>
         </div>
