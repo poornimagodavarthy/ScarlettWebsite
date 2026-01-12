@@ -188,18 +188,18 @@ export default function ScarlettLabs() {
           Results That Matter
         </h2>
         
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem', marginBottom: '4rem' }}>
-          {STATISTICS.map((stat, idx) => (
-            <div key={idx} style={{ textAlign: 'center', padding: '2rem' }}>
-              <div style={{ fontSize: '3.5rem', color: '#4a1a1a', fontWeight: 300, marginBottom: '0.5rem' }}>
-                {stat.number}
-              </div>
-              <div style={{ fontSize: '1.2rem', color: '#555', fontWeight: 300 }}>
-                {stat.label}
-              </div>
+        <div className="stats-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem', marginBottom: '4rem' }}>
+        {STATISTICS.map((stat, idx) => (
+          <div key={idx} className="stat-box" style={{ textAlign: 'center', padding: '2rem' }}>
+            <div className="stat-number" style={{ fontSize: '3.5rem', color: '#4a1a1a', fontWeight: 300, marginBottom: '0.5rem' }}>
+              {stat.number}
             </div>
-          ))}
-        </div>
+            <div className="stat-label" style={{ fontSize: '1.2rem', color: '#555', fontWeight: 300 }}>
+              {stat.label}
+            </div>
+          </div>
+        ))}
+      </div>
         <h3 style={{ 
           fontSize: '1.8rem', 
           color: '#4a1a1a', 
