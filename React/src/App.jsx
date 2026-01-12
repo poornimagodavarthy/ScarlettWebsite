@@ -55,6 +55,7 @@ export default function ScarlettLabs() {
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [expandedMethod, setExpandedMethod] = useState(null);
 
   const handleSubmit = async () => {
     const response = await fetch("https://formspree.io/f/xblnywed", {
@@ -155,18 +156,29 @@ export default function ScarlettLabs() {
           Our Method
         </h2>
         {METHOD_STEPS.map((method, idx) => (
-          <div key={idx} className="method-card">
-            <div style={{ fontSize: '3rem', color: '#4a1a1a', fontWeight: 300, marginBottom: '1rem' }}>
-              {method.number}
+        <div 
+          key={idx} 
+          className={`method-card ${window.innerWidth <= 768 && expandedMethod !== idx ? 'method-card-collapsed' : ''}`}
+          onClick={() => window.innerWidth <= 768 && setExpandedMethod(expandedMethod === idx ? null : idx)}
+        >
+          <div className="method-card-header">
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flex: 1 }}>
+              <div style={{ fontSize: window.innerWidth <= 768 ? '2rem' : '3rem', color: '#4a1a1a', fontWeight: 300 }}>
+                {method.number}
+              </div>
+              <div style={{ fontSize: window.innerWidth <= 768 ? '1.3rem' : '1.8rem', color: '#000', fontWeight: 500 }}>
+                {method.title}
+              </div>
             </div>
-            <div style={{ fontSize: '1.8rem', color: '#000', marginBottom: '1rem', fontWeight: 500 }}>
-              {method.title}
-            </div>
-            <div style={{ fontSize: '1.1rem', color: '#555', lineHeight: 1.6 }}>
-              {method.description}
-            </div>
+            {window.innerWidth <= 768 && (
+              <div className={`method-toggle ${expandedMethod === idx ? 'open' : ''}`}>+</div>
+            )}
           </div>
-        ))}
+          <div className="method-description" style={{ fontSize: '1.1rem', color: '#555', lineHeight: 1.6, marginTop: window.innerWidth <= 768 && expandedMethod === idx ? '1rem' : '0' }}>
+            {method.description}
+          </div>
+        </div>
+      ))}
       </div>
 
       {/* Results Section */}
