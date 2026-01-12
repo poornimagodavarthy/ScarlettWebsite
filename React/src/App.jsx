@@ -128,7 +128,7 @@ export default function ScarlettLabs() {
           <p style={{ 
             fontSize: '1rem', 
             color: '#333', 
-            marginBottom: '10rem', 
+            marginBottom: '15rem', 
             fontWeight: 300, 
             textAlign: 'center' 
           }}>
