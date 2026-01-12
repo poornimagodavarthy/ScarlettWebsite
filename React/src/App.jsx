@@ -79,7 +79,7 @@ export default function ScarlettLabs() {
       {/* Header */}
       <div className="divider-line"></div>
       <div style={{ padding: 'clamp(1.5rem, 3vw, 2rem) clamp(1rem, 3vw, 1.5rem)' }}>
-      <div className="header-flex" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+      <div className="header-flex" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap' }}>
         <div style={{ flex: 1 }}>
           <img 
             src="ScarlettLabsLogo.png" 

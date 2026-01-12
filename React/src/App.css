@@ -410,15 +410,8 @@ textarea {
 }
 /* Mobile responsive styles */
 @media (max-width: 768px) {
-  html {
-    font-size: 90%;
-  }
-  
   body {
-    font-weight: 400;
-  }
-  body {
-    font-weight: 400;
+    zoom: 0.85;
   }
   
   .method-card {
@@ -532,9 +525,17 @@ textarea {
   }
 
   .hamburger {
-    display: flex;
+    display: flex !important;
     position: relative;
     z-index: 1002;
+    order: 3;
+  }
+  .header-flex > div:first-child {
+    order: 1;
+  }
+  
+  .nav-responsive {
+    order: 2;
   }
   
   .nav-responsive {
