@@ -428,8 +428,9 @@ textarea {
   }
   
   .header-flex {
-    flex-direction: column;
-    gap: 1.5rem;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
   }
 
   .header-container {
@@ -582,7 +583,9 @@ textarea {
   border: none;
   cursor: pointer;
   padding: 0.5rem;
-  z-index: 1001;
+  z-index: 1002;
+  align-self: flex-start;
+  margin-top: 0;
 }
 
 .hamburger span {
