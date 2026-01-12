@@ -200,6 +200,16 @@ export default function ScarlettLabs() {
             </div>
           ))}
         </div>
+        <h3 style={{ 
+          fontSize: '1.8rem', 
+          color: '#4a1a1a', 
+          marginBottom: '2rem', 
+          marginTop: '2rem',
+          fontWeight: 400,
+          fontFamily: "'Cormorant Garamond', serif"
+        }}>
+          How We've Helped
+        </h3>
 
         {CASE_STUDIES.map((study, idx) => (
         <div 
