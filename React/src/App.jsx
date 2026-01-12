@@ -204,7 +204,7 @@ export default function ScarlettLabs() {
           fontSize: '1.8rem', 
           color: '#4a1a1a', 
           marginBottom: '2rem', 
-          marginTop: '2rem',
+          marginTop: '4rem',
           fontWeight: 400,
           fontFamily: "'Cormorant Garamond', serif"
         }}>
