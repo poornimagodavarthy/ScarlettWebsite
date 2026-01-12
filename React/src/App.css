@@ -548,7 +548,7 @@ textarea {
     background: white;
     flex-direction: column;
     align-items: flex-start !important;
-    padding: 4rem 2rem 2rem;
+    padding: 2rem 2rem 2rem;
     box-shadow: -2px 0 10px rgba(0,0,0,0.1);
     transition: right 0.3s ease;
     z-index: 1000;
@@ -597,7 +597,7 @@ textarea {
 
 .hamburger span {
   width: 25px;
-  height: 3px;
+  height: 2px;
   background: #4a1a1a;
   transition: all 0.3s;
 }
