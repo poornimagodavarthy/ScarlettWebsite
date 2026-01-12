@@ -108,7 +108,7 @@ export default function ScarlettLabs() {
           <a href="#method" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Method</a>
           <a href="#results" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Results</a>
           <a href="#about" className="nav-link" onClick={() => setMobileMenuOpen(false)}>About</a>
-          <button className="cta-button" onClick={() => { setShowModal(true); setMobileMenuOpen(false); }}>Let's Talk</button>
+          <button className="cta-button cta-desktop-only" onClick={() => { setShowModal(true); setMobileMenuOpen(false); }}>Let's Talk</button>
         </nav>
         
         {mobileMenuOpen && <div className="mobile-menu-overlay" onClick={() => setMobileMenuOpen(false)}></div>}
@@ -136,6 +136,25 @@ export default function ScarlettLabs() {
           }}>
             We help operations teams bring clarity to internal knowledge by making existing documents easier to find, reference, and trust.
           </p>
+          <button 
+            className="cta-mobile-hero" 
+            onClick={() => setShowModal(true)}
+            style={{
+              display: 'none',
+              margin: '0 auto 15rem',
+              background: '#4a1a1a',
+              color: 'white',
+              border: 'none',
+              padding: '1rem 3rem',
+              fontSize: '1.2rem',
+              cursor: 'pointer',
+              fontFamily: "'Cormorant Garamond', serif",
+              fontWeight: 400,
+              transition: 'background 0.3s'
+            }}
+          >
+            Let's Talk
+          </button>
 
           <p style={{
           maxWidth: '700px',

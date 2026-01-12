@@ -409,6 +409,9 @@ textarea {
     grid-template-columns: 1fr 3.5fr !important;
   }
 }
+.cta-mobile-hero {
+  display: none;
+}
 /* Mobile responsive styles */
 @media (max-width: 768px) {
   body {
@@ -660,6 +663,13 @@ textarea {
   .case-description {
     margin-top: 0;
     transition: all 0.3s ease;
+  }
+  .cta-desktop-only {
+    display: none !important;
+  }
+  
+  .cta-mobile-hero {
+    display: block !important;
   }
   
 }
