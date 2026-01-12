@@ -73,158 +73,11 @@ export default function ScarlettLabs() {
 
   return (
     <div style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap');
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body { 
-          font-family: 'Cormorant Garamond', serif;
-          font-weight: 300;
-        }
-        
-        .divider-line {
-          width: 100%;
-          height: 1px;
-          background-color: #dcdcdc;
-          margin-top: 7rem;
-          margin-bottom: 0;
-          position: relative;
-          z-index: 1;
-        }
-        
-        .logo-img {
-          position: relative;
-          z-index: 10;
-          margin-top: -1.2rem;
-        }
-        
-        .nav-link {
-          font-size: 1.3rem;
-          color: #000;
-          text-decoration: none;
-          transition: color 0.3s;
-        }
-        
-        .nav-link:hover { color: #4a1a1a; }
-        
-        .cta-button, .contact-button {
-          background: #4a1a1a;
-          color: white;
-          border: none;
-          cursor: pointer;
-          transition: background 0.3s;
-          font-family: 'Cormorant Garamond', serif;
-        }
-        
-        .cta-button:hover, .contact-button:hover {
-          background: #6a2a2a;
-        }
-        
-        .cta-button {
-          padding: 0.8rem 3rem;
-          font-size: 1.3rem;
-          white-space: nowrap;
-        }
-        
-        .contact-button {
-          padding: 1.2rem 4rem;
-          font-size: 1.4rem;
-          margin-top: 2rem;
-        }
-        
-        .method-card {
-          background: white;
-          padding: 2.5rem;
-          margin-bottom: 2rem;
-          border-left: 4px solid #4a1a1a;
-          transition: transform 0.3s;
-        }
-        
-        .method-card:hover { transform: translateX(10px); }
-        
-        .form-trigger {
-          position: fixed;
-          bottom: 20px;
-          right: 20px;
-          background: #D4AF37;
-          color: white;
-          border: none;
-          padding: 1rem 2rem;
-          border-radius: 50px;
-          font-size: 1rem;
-          cursor: pointer;
-          box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-          z-index: 9999;
-          font-weight: 600;
-          font-family: 'Cormorant Garamond', serif;
-        }
-        
-        .form-trigger:hover { background: #C4A137; }
-        
-        .modal-overlay {
-          position: fixed;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background: rgba(0,0,0,0.5);
-          z-index: 99998;
-        }
-        
-        .modal-content {
-          position: fixed;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          background: white;
-          box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
-          z-index: 99999;
-          padding: 2rem;
-          max-height: 80vh;
-          overflow-y: auto;
-        }
-        
-        .close-button {
-          position: absolute;
-          top: 1rem;
-          right: 1rem;
-          background: none;
-          border: none;
-          font-size: 1.5rem;
-          cursor: pointer;
-          color: #333;
-        }
-        
-        input, textarea {
-          width: 100%;
-          padding: 0.75rem;
-          margin: 0.5rem 0;
-          border: 1px solid #ddd;
-          border-radius: 4px;
-          font-size: 1rem;
-          font-family: 'Cormorant Garamond', serif;
-        }
-        
-        textarea { resize: vertical; }
-        
-        .submit-button {
-          background: #4a1a1a;
-          color: white;
-          border: none;
-          padding: 0.75rem 2rem;
-          border-radius: 4px;
-          font-size: 1rem;
-          cursor: pointer;
-          margin-top: 0.5rem;
-          font-family: 'Cormorant Garamond', serif;
-        }
-      `}</style>
 
       {/* Header */}
       <div className="divider-line"></div>
-      <div style={{ padding: '2rem 1.5rem' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+      <div style={{ padding: 'clamp(1.5rem, 3vw, 2rem) clamp(1rem, 3vw, 1.5rem)' }}>
+        <div className="header-flex" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
           <div style={{ flex: 1 }}>
             <img 
               src="ScarlettLabsLogo.png" 
@@ -240,7 +93,7 @@ export default function ScarlettLabs() {
               Boutique AI Consulting
             </p>
           </div>
-          <nav style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', gap: '1.5rem', flex: 2 }}>
+          <nav className="nav-responsive" style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', gap: '1.5rem', flex: 2 }}>
             <a href="#method" className="nav-link">Method</a>
             <a href="#results" className="nav-link">Results</a>
             <a href="#about" className="nav-link">About</a>
@@ -251,7 +104,7 @@ export default function ScarlettLabs() {
         {/* Hero */}
         <div style={{ padding: '0 clamp(1rem, 5vw, 2rem)', marginTop: 0 }}>
           <h1 style={{ 
-            fontSize: '2rem', 
+            fontSize: 'clamp(1.5rem, 5vw, 2rem)',
             fontWeight: 300, 
             color: '#000', 
             marginTop: '5rem', 
@@ -325,7 +178,7 @@ export default function ScarlettLabs() {
         </div>
 
         {CASE_STUDIES.map((study, idx) => (
-          <div key={idx} style={{ background: '#f8f8f8', padding: '2.5rem', marginBottom: '2rem' }}>
+          <div key={idx} style={{ background: '#f8f8f8', padding: 'clamp(1.5rem, 3vw, 2.5rem)', marginBottom: '2rem' }}>
             <div style={{ fontSize: '1.6rem', color: '#4a1a1a', marginBottom: '1rem', fontWeight: 500 }}>
               {study.title}
             </div>

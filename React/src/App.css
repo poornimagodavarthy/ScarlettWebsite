@@ -1,14 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap&text-rendering=optimizeLegibility');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+p, div, span {
+  text-rendering: optimizeLegibility;
 }
 
 .App {
@@ -397,9 +408,30 @@ textarea {
     grid-template-columns: 1fr 3.5fr !important;
   }
 }
-
+/* Mobile responsive styles */
 /* Mobile responsive styles */
 @media (max-width: 768px) {
+  body {
+    font-weight: 400;
+  }
+  
+  .method-card {
+    padding: 1.5rem;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  .nav-responsive {
+    flex-direction: column;
+    align-items: flex-start !important;
+    width: 100%;
+    gap: 1rem !important;
+  }
+  
+  .header-flex {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
   .header-container {
     padding: 1.5rem 1rem;
   }
@@ -456,5 +488,39 @@ textarea {
 
   .footer {
     padding: 2rem 1rem;
+  }
+  
+  .divider-line {
+    margin-top: 3rem;
+  }
+  
+  .logo-img {
+    width: 80px;
+    margin-top: -0.8rem;
+  }
+  
+  .nav-link {
+    font-size: 1.1rem;
+  }
+  
+  .cta-button {
+    padding: 0.7rem 2rem;
+    font-size: 1.1rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  .case-study {
+    padding: 1.5rem;
+  }
+  
+  /* Better rendering for mobile */
+  p, div {
+    font-weight: 400;
+  }
+  
+  .method-description,
+  .case-study-text {
+    font-weight: 400;
   }
 }
