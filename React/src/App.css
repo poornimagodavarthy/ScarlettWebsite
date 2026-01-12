@@ -409,8 +409,14 @@ textarea {
   }
 }
 /* Mobile responsive styles */
-/* Mobile responsive styles */
 @media (max-width: 768px) {
+  html {
+    font-size: 90%;
+  }
+  
+  body {
+    font-weight: 400;
+  }
   body {
     font-weight: 400;
   }
