@@ -223,7 +223,7 @@ export default function ScarlettLabs() {
 
       {/* Header */}
       <div className="divider-line"></div>
-      <div style={{ padding: '2rem 4rem' }}>
+      <div style={{ padding: '2rem 1.5rem' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
           <div style={{ flex: 1 }}>
             <img 
@@ -249,7 +249,7 @@ export default function ScarlettLabs() {
         </div>
 
         {/* Hero */}
-        <div style={{ padding: '0 2rem', marginTop: 0 }}>
+        <div style={{ padding: '0 clamp(1rem, 5vw, 2rem)', marginTop: 0 }}>
           <h1 style={{ 
             fontSize: '2rem', 
             fontWeight: 300, 
@@ -268,13 +268,26 @@ export default function ScarlettLabs() {
             fontWeight: 300, 
             textAlign: 'center' 
           }}>
-            Bring clarity to internal knowledge with precise, source-linked answers from your own documents.
+            We help operations teams bring clarity to internal knowledge by making existing documents easier to find, reference, and trust.
           </p>
+
+          <p style={{
+          maxWidth: '700px',
+          margin: '0 auto 6rem',
+          fontSize: 'clamp(0.95rem, 2.5vw, 1.05rem)',
+          padding: '0 1rem',
+          lineHeight: 1.7,
+          color: '#444',
+          textAlign: 'center'
+        }}>
+          As teams scale, internal documents fragment quietly. SOPs, spreadsheets, and process notes still exist — but finding the right answer often depends on who you ask, not where it’s written.
+        </p>
+
         </div>
       </div>
 
       {/* Method Section */}
-      <div id="method" style={{ padding: '2.5rem 3rem', background: '#f8f8f8' }}>
+      <div id="method" style={{ padding: 'clamp(2rem, 4vw, 2.5rem) clamp(1rem, 5vw, 3rem)', background: '#f8f8f8' }}>
         <h2 style={{ fontSize: '2.5rem', color: '#4a1a1a', marginBottom: '3rem', fontWeight: 400 }}>
           Our Method
         </h2>
@@ -294,12 +307,12 @@ export default function ScarlettLabs() {
       </div>
 
       {/* Results Section */}
-      <div id="results" style={{ padding: '5rem 6rem', background: 'white' }}>
+      <div id="results" style={{ padding: 'clamp(3rem, 6vw, 5rem) clamp(1rem, 8vw, 6rem)', background: 'white' }}>
         <h2 style={{ fontSize: '2.5rem', color: '#4a1a1a', marginBottom: '3rem', fontWeight: 400 }}>
           Results That Matter
         </h2>
         
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem', marginBottom: '4rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem', marginBottom: '4rem' }}>
           {STATISTICS.map((stat, idx) => (
             <div key={idx} style={{ textAlign: 'center', padding: '2rem' }}>
               <div style={{ fontSize: '3.5rem', color: '#4a1a1a', fontWeight: 300, marginBottom: '0.5rem' }}>
@@ -328,13 +341,13 @@ export default function ScarlettLabs() {
       </div>
 
       {/* About Section */}
-      <div id="about" style={{ padding: '4rem 6rem', background: '#4a1a1a', color: 'white' }}>
+      <div id="about" style={{ padding: 'clamp(3rem, 5vw, 4rem) clamp(1rem, 8vw, 6rem)', background: '#4a1a1a', color: 'white' }}>
         <h2 style={{ fontSize: '2.5rem', marginBottom: '2rem', fontWeight: 400 }}>
           About Us
         </h2>
         
-        <div style={{ maxWidth: '80%' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 3.5fr', gap: '2rem', alignItems: 'start' }}>
+        <div style={{ maxWidth: '100%' }}>
+        <div className="about-grid-custom" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '2rem', alignItems: 'start' }}>
             <div>
               <img 
                 src="headshot.png" 
@@ -373,7 +386,7 @@ export default function ScarlettLabs() {
       </div>
 
       {/* Contact Section */}
-      <div style={{ padding: '5rem 6rem', background: 'white', textAlign: 'center' }}>
+      <div style={{ padding: 'clamp(3rem, 6vw, 5rem) clamp(1rem, 8vw, 6rem)', background: 'white', textAlign: 'center' }}>
         <h2 style={{ fontSize: '2.5rem', color: '#000', marginBottom: '2rem', fontWeight: 400 }}>
           Ready to Get Started?
         </h2>
@@ -387,7 +400,7 @@ export default function ScarlettLabs() {
 
       {/* Footer */}
       <div style={{ 
-        padding: '2rem 6rem', 
+        padding: '2rem clamp(1rem, 8vw, 6rem)',
         background: 'white', 
         textAlign: 'center', 
         color: '#555', 
