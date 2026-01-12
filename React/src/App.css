@@ -55,6 +55,7 @@ p, div, span {
   position: relative;
   z-index: 10;
   margin-top: -1.2rem;
+  margin-left: 2rem;
 }
 
 .brand-name {
@@ -63,12 +64,14 @@ p, div, span {
   margin: 0;
   position: relative;
   z-index: 10;
+  margin-left: 2rem;
 }
 
 .tagline {
   font-size: 1rem;
   font-weight: 300;
   margin: 0;
+  margin-left: 2rem;
 }
 
 /* ===== NAVIGATION ===== */
@@ -495,8 +498,12 @@ textarea {
   }
   
   .logo-img {
-    width: 80px;
-    margin-top: -0.8rem;
+    margin-left: 1rem;
+  }
+  
+  .brand-name,
+  .tagline {
+    margin-left: 1rem;
   }
   
   .nav-link {
@@ -549,7 +556,7 @@ textarea {
     flex-direction: column;
     align-items: flex-start !important;
     justify-content: flex-start !important;
-    padding: 2rem 2rem 2rem;
+    padding: 4rem 2rem 2rem;
     box-shadow: -2px 0 10px rgba(0,0,0,0.1);
     transition: right 0.3s ease;
     z-index: 1000;
