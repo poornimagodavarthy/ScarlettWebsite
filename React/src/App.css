@@ -617,6 +617,36 @@ textarea {
     background: rgba(0, 0, 0, 0.5);
     z-index: 999;
   }
+  .case-study-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .case-study-collapsed {
+    padding: 1rem 1.5rem !important;
+  }
+  
+  .case-study-collapsed .case-description {
+    display: none;
+  }
+  
+  .case-toggle {
+    font-size: 1.8rem;
+    color: #4a1a1a;
+    transition: transform 0.3s;
+    line-height: 1;
+    margin-left: 1rem;
+    flex-shrink: 0;
+  }
+  
+  .case-toggle.open {
+    transform: rotate(45deg);
+  }
+  
+  .case-description {
+    margin-top: 0;
+    transition: all 0.3s ease;
+  }
   
 }
 

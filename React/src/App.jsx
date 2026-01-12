@@ -56,6 +56,7 @@ export default function ScarlettLabs() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [expandedMethod, setExpandedMethod] = useState(null);
+  const [expandedCase, setExpandedCase] = useState(null);
 
   const handleSubmit = async () => {
     const response = await fetch("https://formspree.io/f/xblnywed", {
@@ -201,10 +202,21 @@ export default function ScarlettLabs() {
         </div>
 
         {CASE_STUDIES.map((study, idx) => (
-          <div key={idx} style={{ background: '#f8f8f8', padding: 'clamp(1.5rem, 3vw, 2.5rem)', marginBottom: '2rem' }}>
-            <div style={{ fontSize: '1.6rem', color: '#4a1a1a', marginBottom: '1rem', fontWeight: 500 }}>
+        <div 
+          key={idx} 
+          className={`case-study-card ${window.innerWidth <= 768 && expandedCase !== idx ? 'case-study-collapsed' : ''}`}
+          onClick={() => window.innerWidth <= 768 && setExpandedCase(expandedCase === idx ? null : idx)}
+          style={{ background: '#f8f8f8', padding: 'clamp(1.5rem, 3vw, 2.5rem)', marginBottom: '2rem' }}
+        >
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+            <div style={{ flex: 1, fontSize: '1.6rem', color: '#4a1a1a', marginBottom: window.innerWidth <= 768 ? '0' : '1rem', fontWeight: 500 }}>
               {study.title}
             </div>
+            {window.innerWidth <= 768 && (
+              <div className={`case-toggle ${expandedCase === idx ? 'open' : ''}`}>+</div>
+            )}
+          </div>
+          <div className="case-description" style={{ marginTop: window.innerWidth <= 768 && expandedCase === idx ? '1rem' : '0' }}>
             <div style={{ fontSize: '1.1rem', color: '#555', lineHeight: 1.6, marginBottom: '1rem' }}>
               {study.description}
             </div>
@@ -212,7 +224,8 @@ export default function ScarlettLabs() {
               <strong>{study.impact}</strong>
             </div>
           </div>
-        ))}
+        </div>
+      ))}
       </div>
 
       {/* About Section */}
