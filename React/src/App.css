@@ -482,8 +482,11 @@ textarea {
   }
 
   .hero-title {
-    font-size: 1.5rem;
+    font-size: 1.65rem !important;
     margin-top: 2rem;
+  }
+  .hero-section p {
+    font-size: 1.1rem !important;
   }
 
   .method-section {
@@ -546,12 +549,12 @@ textarea {
   
   .brand-name {
     margin: 0.3rem 0 0 1rem !important;
-    font-size: 1.5rem !important;
+    font-size: 1.7rem !important;
   }
   
   .tagline {
     margin: 0 0 1.5rem 1rem !important;
-    font-size: 0.85rem !important;
+    font-size: 0.95rem !important;
   }
   
   .nav-link {
